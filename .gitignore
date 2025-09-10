@@ -1,0 +1,8 @@
+x64/
+eboot.bin
+*.zip
+*.pkg
+param.sfo
+*.gp4
+.vscode
+output.txt
