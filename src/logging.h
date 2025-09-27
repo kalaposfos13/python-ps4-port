@@ -12,7 +12,9 @@ void PrintLog(const char* log_level, const char* file, unsigned int line_num, co
         message = fmt::vformat(format, fmt::make_format_args(args...));
     }
 
-    fmt::print("[Homebrew] {}:{} <{}> {}: {}\n", file, line_num, log_level, function, message);
+    std::string full_log =
+        fmt::format("[Homebrew] {}:{} <{}> {}: {}\n", file, line_num, log_level, function, message);
+    sceKernelDebugOutText(0, full_log.c_str());
 }
 
 #define LOG_DEBUG(...)    PrintLog("Debug",    __FILE__, __LINE__, __func__, __VA_ARGS__)
