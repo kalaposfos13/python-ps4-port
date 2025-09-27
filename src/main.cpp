@@ -12,7 +12,10 @@ int hookable_function(int a) {
 }
 
 int main(void) {
+
     LOG_INFO("Starting homebrew");
+
+    sceKernelLoadStartModule("/app0/hook_example.prx", 0, 0, 0, 0, 0);
 
     if (hookable_function(42) != 13) {
         LOG_ERROR("Hooking failed");
