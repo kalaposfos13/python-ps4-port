@@ -6,3 +6,4 @@ param.sfo
 *.gp4
 .vscode
 output.txt
+cpython/*.a
