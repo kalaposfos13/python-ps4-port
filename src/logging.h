@@ -1,6 +1,7 @@
 #pragma once
 
 #include "fmt/format.h"
+#include "orbis/libkernel.h"
 
 template <typename... Args>
 void PrintLog(const char* log_level, const char* file, unsigned int line_num, const char* function,
